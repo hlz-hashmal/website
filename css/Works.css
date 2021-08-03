@@ -1,0 +1,141 @@
+/* Works Page */
+
+body {
+    background: linear-gradient(to bottom, #6ca0ff, #0d56ff);
+    height: 100vh;
+}
+
+/* WorksArea */
+
+.container {
+    position: relative;
+    top: 20px;
+    text-align: center;
+}
+
+.title {
+    position: relative;
+    top: 80px;
+    text-shadow: 0 0 15px #006eff;
+    z-index: 4;
+    color: white;
+    font-size: 40px;
+}
+
+/* SlideShow */
+
+.slidershow {
+    width: 89%;
+    height: 700px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 15px black;
+}
+
+.middle {
+    position: relative;
+    margin: 0 5%;
+    align-items: center;
+}
+
+.navigation {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+}
+
+.bar {
+    width: 50px;
+    height: 10px;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    padding: 5px 0;
+    margin: 6px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.bar:hover {
+    background: #fff;
+}
+  
+input[name="r"] {
+    position: absolute;
+    visibility: hidden;
+}
+  
+.slides {
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+  
+.slide {
+    width: 20%;
+    transition: 0.6s;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+}
+  
+#r1:checked ~ .s1 {
+    margin-left: 0;
+}
+#r2:checked ~ .s1 {
+    margin-left: -20%;
+}
+#r3:checked ~ .s1 {
+    margin-left: -40%;
+}
+#r4:checked ~ .s1 {
+    margin-left: -60%;
+}
+#r5:checked ~ .s1 {
+    margin-left: -80%;
+}
+
+/* Responsives */
+/* Width */
+
+@media(max-width: 800px) {
+    .container {
+        top: 100px;
+    }
+    .slidershow {
+        width: 700px;
+        height: 400px;
+    }
+    .bar {
+        width: 15px;
+    }
+    .middle {
+        position: relative;
+        margin: 30px 3%;
+        align-items: center;
+    }
+}
+
+@media(max-width: 650px) {
+    .container {
+        top: 100px;
+    }
+    .slidershow {
+        width: 700px;
+       height: 400px;
+    }
+    .bar {
+        width: 15px;
+    }
+    .title {
+        font-size: 30px;
+    }
+
+    .middle {
+        margin: 0 20px;
+        width: 90%;
+    }
+}
